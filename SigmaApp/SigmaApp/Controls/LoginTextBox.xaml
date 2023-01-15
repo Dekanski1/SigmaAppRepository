@@ -5,12 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SigmaApp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             MinWidth="300"
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="_this">
+    
+    <!-- Border -->
     <Border Style="{StaticResource LoginBorderStyles}">
         <Border.Effect>
             <DropShadowEffect BlurRadius="23" ShadowDepth="5" Direction="270"
                               Color="WhiteSmoke" />
         </Border.Effect>
+
+        <Grid Margin="20,6">
+        
+            <!-- TextBlock - Title -->
+            <TextBlock
+                x:Name="title"
+                Style="{StaticResource LoginTextBlockStyles}"/>
             
+            <!-- TextBox -->
+             <TextBox
+                x:Name="login"
+                Style="{StaticResource LoginTextBoxStyles}"/>  
+            
+            
+            <!-- PasswordBox -->
+            <PasswordBox 
+                x:Name="passbox"
+                PasswordChanged="passbox_PasswordChanged"/>
+
+            <Button 
+                x:Name="showPass"
+                Background="Transparent"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"/>
+
+
+
+
+
+        </Grid>
+
     </Border>
+
 </UserControl>

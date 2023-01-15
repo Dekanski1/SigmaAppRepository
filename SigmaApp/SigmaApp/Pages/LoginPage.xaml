@@ -12,7 +12,7 @@
       Background="WhiteSmoke"
       Title="LoginPage">
 
-    <ScrollViewer>
+    <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
@@ -44,11 +44,14 @@
                 <!-- Login TextBox -->
 
                 <Controls:LoginTextBox
-                    Grid.Row="0"/>
+                    Grid.Row="0"
+                    PlaceHolder="Login"/>
 
                 <!-- Login PasswordBox -->
 
                 <Controls:LoginTextBox
+                    PlaceHolder="Password"
+                    IsPasswoed="True"
                     Grid.Row="1"/>
 
                 <!-- Login Error text -->
@@ -76,19 +79,19 @@
                         Grid.Column="0"
                         Content="Zamknij"
                         Click="LoginCloseButton"
-                        Style="{StaticResource LoginButtons}"
+                        Style="{StaticResource LoginButtonsStyles}"
                     />
 
                     <Button 
                         Grid.Column="1"
                         Content="Zaloguj"
                         Click="LoginNextPageButton"
-                        Style="{StaticResource LoginButtons}"
+                        Style="{StaticResource LoginButtonsStyles}"
                     />
 
                 </Grid>
                 </Grid>
             </Grid>
         
-    </ScrollViewer>
+    </Grid>
 </Page>
