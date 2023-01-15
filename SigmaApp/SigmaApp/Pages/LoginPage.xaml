@@ -75,12 +75,14 @@
                     <Button 
                         Grid.Column="0"
                         Content="Zamknij"
+                        Click="LoginCloseButton"
                         Style="{StaticResource LoginButtons}"
                     />
 
                     <Button 
                         Grid.Column="1"
                         Content="Zaloguj"
+                        Click="LoginNextPageButton"
                         Style="{StaticResource LoginButtons}"
                     />
 

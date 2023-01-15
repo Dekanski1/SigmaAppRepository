@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
 namespace SigmaApp
 {
@@ -12,7 +11,7 @@ namespace SigmaApp
         {
             InitializeComponent();
 
-            Main.Navigate(new Uri("/Pages/LoginPage.xaml", UriKind.RelativeOrAbsolute));
+            this.Content = new LoginPage();
         }
         
     }
